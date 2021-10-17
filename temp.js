@@ -35,26 +35,26 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=0
 
 
 
-//   if (e.key === 'Enter') {
-//       let api = 'http://api.openweathermap.org/data/2.5/weather?q='+ input.value +' &appid=06f24d0de2580b6656c9cc5d9ee28f70';
-//     fetch(api) 
-//     .then( function(respose){
-//        let data = respose.json();
-//        return data;
-//      })
-//     .then(function(data){
-//       var tempValue= data['main']['temp'];
-//       var cityName= data['name'];
-//       var descValue = data['weather'][0]['description'];
+  if (e.key === 'Enter') {
+      let api = 'http://api.openweathermap.org/data/2.5/weather?q='+ input.value +' &appid=06f24d0de2580b6656c9cc5d9ee28f70';
+    fetch(api) 
+    .then( function(respose){
+       let data = respose.json();
+       return data;
+     })
+    .then(function(data){
+      var tempValue= data['main']['temp'];
+      var cityName= data['name'];
+      var descValue = data['weather'][0]['description'];
 
-//       cityName.innerHTML = cityName;
-//       descValue.innerHTML = descValue;
-//       tempValue.innerHTML = tempValue;
-//       input.value ="";
+      cityName.innerHTML = cityName;
+      descValue.innerHTML = descValue;
+      tempValue.innerHTML = tempValue;
+      input.value ="";
 
 
-//      })  
-//     .catch(err => alert("Wrong City name"));
+     })  
+    .catch(err => alert("Wrong City name"));
      
-//   }
-// });
+  }
+});
